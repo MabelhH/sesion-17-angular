@@ -1,0 +1,35 @@
+<div class="container">
+<h1>lista</h1>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+               <th scope="col">ID</th>
+               <th scope="col">Codigo</th>
+               <th scope="col">Descripcion</th>
+               <th scope="col">Precio de compra</th>
+               <th scope="col">Precio de venta</th>
+               <th scope="col">Ganancia</th>
+               <th scope="col">Existencia</th>
+               <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lista of listas">
+                <td>{{lista.id}}</td>
+                <td>{{lista.codigo}}</td>
+                <td>{{lista.descripcion}}</td>
+                <td>{{lista.precio_compra}}</td>
+                <td>{{lista.precio_venta}}</td>
+                <td>{{lista.ganancia}}</td>
+                <td>{{lista.existencia}}</td>
+                <td><button class="boton" (click)="editar(lista.id)">editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="producto">
+<app-lista [producto]="producto" (guardar)="enviar($event)"></app-lista>
+</div>
+ 
+</div>

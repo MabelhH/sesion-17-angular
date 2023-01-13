@@ -1,0 +1,32 @@
+<div class="lista">
+ <form #tienda="ngForm">
+    <h1>Poducto N:{{producto.id}} </h1>
+    <div class="">
+        <label for="id">Id</label>
+        <input type="number" name="id" id="id"  class="form-control" [(ngModel)]="producto.id">
+    </div><br>
+    <div class="">
+        <label for="codigo">Codigo</label>
+        <input type="number" name="codigo" id="codigo"  class="form-control" [(ngModel)]="producto.codigo">
+    </div><br>
+    <div class="">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion"  class="form-control" [(ngModel)]="producto.descripcion">
+    </div><br>
+    <div class="">
+        <label for="Precioventa">Precio de venta</label>
+        <input type="number" name="Precioventa" id="Precioventa"  class="form-control" [(ngModel)]="producto.precio_venta">
+    </div><br>
+    <div class="">
+        <label for="Preciocompra">Precio de compra</label>
+        <input type="number" name="Preciocompra" id="Preciocompra"  class="form-control" [(ngModel)]="producto.precio_compra">
+    </div><br>
+    <div class="">
+        <label for="existencia">Existencia</label>
+        <input type="number" name="existencia" id="existencia" class="form-control" [(ngModel)]="producto.existencia">
+    </div><br>
+    <div class="">
+        <button type="submit" class="btn btn-info" (submit)="actulisar()">enviar</button>
+    </div>
+ </form>   
+</div>
